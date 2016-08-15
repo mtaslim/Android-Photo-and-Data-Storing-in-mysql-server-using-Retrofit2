@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/imageButton">
+    <Button
+        android:id="@+id/btnCapturePicture"
+        android:onClick="captureImage"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/camera"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:text="Take Picture"/>
+
+    <Button
+
+        android:id="@+id/btnGalleryPicture"
+        android:onClick="selectImage"
+        android:layout_toRightOf="@+id/btnCapturePicture"
+        android:drawableLeft="@drawable/gallery"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:text="Gallery Picture"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageButton"
+        android:gravity="center"
+        android:id="@+id/imageView">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/photoView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:src="@drawable/userimage"/>
+    </LinearLayout>
+</RelativeLayout>
